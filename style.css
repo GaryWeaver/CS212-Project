@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 100%;
 }
 
 .item3 {
@@ -99,8 +98,8 @@ button {
 
 .nav-items li a {
     display: block;
-    padding: 25px;
-    margin: 30px;
+    padding: 6%;
+    margin: 4%;
     text-decoration: none;
     color: white;
     background-color: #000000;
@@ -117,3 +116,130 @@ button {
     justify-content: center;
     width: 100%;
 }
+
+.reservation-form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.confirmation-message {
+    text-align: center;
+    padding: 20px;
+}
+
+.confirmation-message button {
+    background-color: #007BFF;
+    color: white;
+}
+
+.confirmation-message button:hover {
+    background-color: #0056b3;
+}
+
+.body {
+    background-color: black;
+}
+
+#review-section {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d3cccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #review-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #review-form input, 
+  #review-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  #show-reviews-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(243, 241, 241);
+    background-color: #370c9b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #show-reviews-button:hover {
+    background-color: #370c9b;
+  }
+
+
+  #reviews-container {
+    margin-top: 20px;
+  }
+
+  .review-item {
+    background: rgb(172, 145, 145);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .review-item h4 {
+    margin: 0;
+    color: #333;
+  }
+
+  .review-item p {
+    margin: 5px 0 0;
+    color: #555;
+  }
