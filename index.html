@@ -8,33 +8,67 @@
 </head>
 
 <style>
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'sidebar header header header header'
+        'sidebar main main main main'
+        'sidebar main main main main'
+        'sidebar main main main main'
+        'footer footer footer footer footer';
+      grid-template-columns: 1fr 4fr;
+      grid-template-rows: auto 1fr auto;
+      height: 100vh;
+      gap: 0px;
+      background-color: white;
+      padding: 0px;
+    }
+
     .item1 { grid-area: header; }
     .item2 { grid-area: sidebar; }
     .item3 { grid-area: main; }
     .item4 { grid-area: footer; }
-    
-    .grid-container {
-      display: grid;
-      grid-template-areas:
-        'sidebar header header header'
-        'sidebar main main main'
-        'sidebar main main main'
-        'sidebar main main main'
-        'footer footer footer footer';
-      /*gap:
-      background-color:
-      padding:*/
-    }
-    
-    .grid-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-    }
 </style>
 
     <body>
+      <div class="grid-container">
+      <div class="item2">
+        <img src="TemporaryLogo.jpg"></img>
 
-    <script src="app.js"></script>
+        <nav>
+          <ul class="nav-items">
+              <li><a href="#menu">Menu</a></li>
+              <li><a href="#review">Reviews</a></li>
+              <li><a href="#booking">Booking</a></li>
+              <li><a href="#history">History</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="item1">
+        <div class="search-container">
+          <input id="searchInput" type="search" placeholder="Search items..." aria-label="Search">
+          <button id="searchButton" type="button">Search</button>
+        </div>
+
+      </div>
+
+      <div class="item3">
+        <h1>About Us</h1>
+        <p>
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Porta commodo litora sociosqu eget sapien finibus potenti. Luctus nostra elementum tortor luctus venenatis semper sociosqu. Fermentum conubia morbi magna dis justo eleifend inceptos. Nullam nec ad sociosqu; mollis viverra in. Pulvinar vehicula sit sit suscipit lacinia ultricies feugiat senectus. Gravida platea augue dui nascetur mauris. Nascetur potenti auctor nostra non maximus nisl. Sed viverra proin eu nostra; tristique purus sed. Vel erat mi nam id cras nam? Sagittis laoreet orci natoque ipsum posuere risus rutrum vivamus. Phasellus nascetur ultricies natoque erat dictum habitasse quisque, ex proin. Aliquam quisque volutpat, enim interdum tempus nisi rutrum. Quisque sem vivamus dapibus nisl proin gravida quisque adipiscing lectus. Faucibus ac lectus tristique velit eu magna primis torquent. Parturient ante quisque aenean sed augue fringilla, facilisis eu? Facilisi lectus vestibulum habitasse eu morbi quis laoreet habitasse. Ad himenaeos dignissim gravida efficitur class diam potenti laoreet. Volutpat curabitur vitae orci cras turpis interdum nec. In eleifend sem consectetur et dignissim quam lobortis praesent massa. Dolor in nunc; tempor nec nullam ex mattis iaculis. Himenaeos suspendisse himenaeos molestie vivamus natoque convallis sem. Platea pellentesque varius condimentum fames nam; dui convallis. Lacus feugiat aliquam quis, elementum massa vulputate praesent mollis. Maecenas viverra habitant montes phasellus venenatis nascetur aliquet. Eros lectus senectus id eget fermentum egestas libero euismod. Hendrerit ultrices nullam diam sit habitant, facilisis porttitor. Risus mus feugiat commodo habitasse commodo orci lacus purus. Volutpat morbi ante penatibus vitae curae. Blandit tempor lobortis non praesent metus. Non tempus facilisi natoque orci nascetur sagittis dolor sociosqu quam. Nullam urna finibus morbi sociosqu dignissim non consectetur taciti. Euismod molestie porttitor est lectus donec sociosqu; fermentum auctor ex. Dis varius nulla gravida vel diam morbi nam. Praesent dignissim lorem risus a semper fusce amet vulputate. Purus cubilia vel habitant class metus suspendisse. Natoque libero nam sed accumsan eu aptent massa mattis habitasse. Magnis est mi pellentesque aptent primis. Eu sagittis suscipit felis neque magnis fusce, diam etiam. Magna arcu eget nec cubilia pulvinar eleifend.
+        </p>
+      </div>
+    </div>
+
+      <ul class="results" id="resultsList">
+        <li>Menu</li>
+        <li>Reviews</li>
+        <li>Booking</li>
+        <li>History</li>
+      </ul>    
+
+      <script src="app.js"></script>
     </body>
 
 </html>
