@@ -8,27 +8,54 @@
 </head>
 
 <body>
-  <header>
-    <div class="navbar">
-      <div class="navi-item"><a href="index.html">Home/History</a></div>
-      <div class="navi-item"><a href="reviews.html">Reviews</a></div>
-      <div class="navi-item"><a href="booking.html">Booking</a></div>
-    </div>
-  </header>
-  <main>
+  <nav>
+    <ul class="nav-items">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="booking.html">Booking</a></li>
+    </ul>
+  </nav>
+
     <section class="card-section">
-      <div class="card"><img src="pizza.jpg"></div>
-      <div class="card"><img src="salad.jpg"></div>
-      <div class="card"><img src="hotdog.jpg"></div>
-      <div class="card"><img src="burger.jpg"></div>
+      <div class="card" data-description="Delicious cheese pizza. Price: $7.99. Nutrition: 890 calories">
+        <img src="pizza.jpg" alt="Pizza">
+      </div>
+      <div class="card" data-description="Fresh and healthy salad. Price: $3.99. Nutrition: 340 calories">
+        <img src="salad.jpg" alt="Salad">
+      </div>
+      <div class="card" data-description="Classic hotdog with mustard. Price: $3.99. Nutrition: 460 calories">
+        <img src="hotdog.jpg" alt="Hotdog">
+      </div>
+      <div class="card" data-description="Juicy cheeseburger with fries. Price: $6.99. Nutrition: 950 calories">
+        <img src="burger.jpg" alt="Burger">
+      </div>
+    </section>
+
+    <section id="infoBox" style="display: none; position: absolute; background: rgba(0, 0, 0, 0.8); color: #fff; padding: 10px; border-radius: 5px;">
+      <p id="infoText"></p>
+    </section>
+
+    <section class="circle-section">
+      <div class="circle-wrapper">
+        <div class="circle"><img src="cocacola.jpg" alt="Coca Cola"></div>
+        <div class="description">Coca Cola: Refreshing soda with a classic taste. <br> Price: $1.99</div>
+      </div>
+      <div class="circle-wrapper">
+        <div class="circle"><img src="fanta.jpg" alt="Fanta"></div>
+        <div class="description">Fanta: Sweet and fruity soda. <br> Price: $1.99</div>
+      </div>
+      <div class="circle-wrapper">
+        <div class="circle"><img src="drpep.jpg" alt="Dr. Pepper"></div>
+        <div class="description">Dr. Pepper: Unique blend of 23 flavors. <br> Price: $1.99</div>
+      </div>
+      <div class="circle-wrapper">
+        <div class="circle"><img src="sprite.jpg" alt="Sprite"></div>
+        <div class="description">Sprite: Crisp and lemon-lime soda. <br> Price: 1.99</div>
+      </div>
     </section>
     
-    <section class="circle-section">
-      <div class="circle"><img src="cocacola.jpg"></div>
-      <div class="circle"><img src="fanta.jpg"></div>
-      <div class="circle"><img src="drpep.jpg"></div>
-      <div class="circle"><img src="sprite.jpg"></div>
-    </section>
+    
+    <div id="descriptionCard"></div>
   </main>
   <script src="app.js"></script>
 </body>
