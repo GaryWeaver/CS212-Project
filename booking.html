@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+          'sidebar main main main main'
+          'sidebar main main main main'
+          'sidebar main main main main';
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        gap: 0px;
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+      }
+  
+      .item1 { grid-area: header; }
+      .item2 { grid-area: sidebar; }
+      .item3 { grid-area: main; }
+      .item4 { grid-area: footer; }
+  </style>
+
+<body>
+  <main>
+    <div class="grid-container">
+        <div class="item3">
+            <section class="reservation-form">
+                <form id="reservationForm">
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="date">Reservation Date</label>
+                    <input type="date" id="date" name="date" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="time">Reservation Time (1pm-1a SUN-FRI)</label>
+                    <input type="time" id="time" name="time" placeholder="Enter a time between 1pm-11pm (SUN-FRI)" required>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="players">Number of Players</label>
+                    <select id="players" name="players" required>
+                      <option value="" disabled selected>Select Number of Players</option>
+                      <option value="1-2">1-2</option>
+                      <option value="3-4">3-4</option>
+                      <option value="5+">5+</option>
+                    </select>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="specialRequests">Special Requests (optional)</label>
+                    <textarea id="specialRequests" name="specialRequests" rows="3"></textarea>
+                  </div>
+        
+                  <button type="submit" class="submit-button">Reserve  a Lane</button>
+                </form>
+        
+                <div id="confirmationMessage" style="display: none;">
+                  <h2>Reservation Confirmed!</h2>
+                  <p>Thank you for reserving a lane. We look forward to seeing you!</p>
+                  <button onclick="resetForm()">Make Another Reservation</button>
+                </div>
+              </section>
+        </div>
+
+        <div class="item2">
+            <nav>
+                <img src="TemporaryLogo.jpg"></img>
+
+                <ul class="nav-items">
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html">Home/History</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </main>
+  <script src="bookingScript.js"></script>
+</body>
+</html>

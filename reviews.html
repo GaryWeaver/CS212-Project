@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+          'sidebar main main main main'
+          'sidebar main main main main'
+          'sidebar main main main main';
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        gap: 0px;
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+      }
+  
+      .item1 { grid-area: header; }
+      .item2 { grid-area: sidebar; }
+      .item3 { grid-area: main; }
+      .item4 { grid-area: footer; }
+  </style>
+
+<body>
+  <main>
+    <div class="grid-container">
+        <div class="item3">
+            <section id="review-section">
+                <h2>Reviews</h2>
+                <form id="review-form">
+                    <input type="text" id="reviewer-name" placeholder="Your Name" required>
+                    <textarea id="review-text" placeholder="Write your review here..." rows="4" required></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+            
+                <div id="reviews-container">
+                    <h3>All Reviews</h3>
+                </div>
+            </section>
+        </div>
+
+        <div class="item2">
+            <nav>
+                <img src="TemporaryLogo.jpg"></img>
+
+                <ul class="nav-items">
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="index.html">Home/History</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </main>
+  <script src="reviewScript.js"></script>
+</body>
+</html>
