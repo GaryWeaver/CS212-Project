@@ -219,14 +219,14 @@ button:hover {
     padding: 10px;
     font-size: 16px;
     color: #fff;
-    background-color: #370c9b;
+    background-color: #02778b;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
 
   #review-form button:hover {
-    background-color: #2c0780;
+    background-color: #019bb6;
   }
 
   #reviews-container {
@@ -234,7 +234,7 @@ button:hover {
   }
 
   .review-item {
-    background: rgb(172, 145, 145);
+    background: rgb(110, 214, 218);
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
